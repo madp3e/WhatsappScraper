@@ -4,6 +4,7 @@ from selenium.webdriver.support import expected_conditions as EC
 from selenium.webdriver.common.by import By
 from bs4 import BeautifulSoup
 from googlesheet import update_sheet
+from datetime import datetime
 
 import time
 import json
@@ -26,14 +27,14 @@ def scrape_whatsapp():
         for name in names:
 
             index = names.index(name)
-            element = WebDriverWait(driver, 100).until(
+            element = WebDriverWait(driver, 27000).until(
                 EC.visibility_of_element_located((By.XPATH, '//span[@title="{}"]'.format(name))))
             # element = driver.find_element_by_xpath('//span[@title="{}"]'.format(name))
 
             element.click()
             print(element.text)
 
-            title = WebDriverWait(driver, 100).until(
+            title = WebDriverWait(driver, 27000).until(
                 EC.visibility_of_element_located((By.XPATH, '//span[@title="{}"]'.format(name)))).text
 
             if title == element.text:
@@ -67,6 +68,8 @@ def scrape_whatsapp():
                         print()
 
                         update_sheet(url, index)
+                        
+            time.sleep(0.5)
 
             # pakoh = WebDriverWait(driver, 100).until(EC.visibility_of_element_located((By.XPATH, '//button['
             #                                                                                    '@class="_2heX1"]')))
