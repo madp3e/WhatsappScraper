@@ -22,7 +22,7 @@ django-request==1.5.5
 django-ssh-deployer==0.4.5
 django-sshkey==2.5.0
 django-storages==1.8
-djangorestframework==3.11.0
+djangorestframework==3.11.2
 docutils==0.15.2
 EB==0.1.5
 env==0.1.0
