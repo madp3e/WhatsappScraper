@@ -35,7 +35,7 @@ httplib2==0.15.0
 idna==2.7
 include==0.2.2
 jinja-ab==0.3.0
-Jinja2==2.10.1
+Jinja2==2.11.3
 jmespath==0.9.4
 kiwisolver==1.1.0
 lxml==4.4.2
