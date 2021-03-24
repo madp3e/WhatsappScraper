@@ -60,7 +60,7 @@ pytz==2019.2
 pywin32==227
 PyYAML==3.13
 requests==2.20.1
-rsa==4.0
+rsa==4.1
 s3transfer==0.2.1
 selenium==3.141.0
 semantic-version==2.5.0
